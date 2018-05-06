@@ -1,0 +1,33 @@
+#######################################
+# Syntax Coloring Map For ADS124X
+#######################################
+
+#######################################
+# Library (KEYWORD3)
+#######################################
+
+ADS124X	KEYWORD3
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################	
+
+PinMap			KEYWORD2
+Initialize		KEYWORD2
+EndCOM			KEYWORD2
+Setup			KEYWORD2
+ResetHW			KEYWORD2
+ResetSW			KEYWORD2
+Start			KEYWORD2
+GetData			KEYWORD2
+GetReg			KEYWORD2
+OffSetReg		KEYWORD2
+FullScaleReg	KEYWORD2
+SetReg			KEYWORD2
+Gain			KEYWORD2
+SysOffSetCal	KEYWORD2
+SysGainCal		KEYWORD2
+SelfOCal		KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
