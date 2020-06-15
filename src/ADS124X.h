@@ -19,7 +19,7 @@
 #define WRITE	     0X40
 #define READ	     0X20
 #define RDATA		 0X12
-#define RESET		 0x06    /// double
+#define ADS12XRESET		 0x06    /// double
 #define STOPDATACONT 0x16
 #define SYSOCAL		 0X60
 #define SYSGCAL		 0X61
