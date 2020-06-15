@@ -44,10 +44,10 @@ void ADS124X::Initialize()
 		pint(START, 0);	// PIN TYPE OUTPUT
 		pinc(START, 1); // PIN LOGIC STATE 1
 	}
-	if (RESET != 99)	// if reset pin is used
+	if (ADS12XRESET != 99)	// if reset pin is used
 	{
-		pint(RESET, 0); // PIN TYPE OUTPUT
-		pinc(RESET, 1); // PIN LOGIC STATE 1
+		pint(ADS12XRESET, 0); // PIN TYPE OUTPUT
+		pinc(ADS12XRESET, 1); // PIN LOGIC STATE 1
 	}
 	
 	setSPI();
@@ -65,7 +65,7 @@ void ADS124X::Setup(byte mux1, byte sys0, byte mux0, byte idac0, byte idac1) // 
 	
 	pinc(CS, 0);
 	wait(1);
-	spiWrite(RESET);
+	spiWrite(ADS12XRESET);
 	wait(ADResetDelay);
 	spiWrite(STOPDATACONT);
 	wait(210);
@@ -105,7 +105,7 @@ void ADS124X::ResetHW()
 void ADS124X::ResetSW()
 {
 	pinc(CS, 0);
-	spiWrite(RESET);
+	spiWrite(ADS12XRESET);
 	pinc(CS, 1);
 }
 
