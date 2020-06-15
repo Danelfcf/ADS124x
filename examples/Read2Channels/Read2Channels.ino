@@ -19,6 +19,7 @@ void setup()
 }
 
 void loop() {
+  ad1.Initialize(); // start spi for ADS
   ad1.Setup((VREFCONON | REFSELT0 | MUXCALNOR), (PGA8 | DR5), (AINP4 | AINN5), (IDAC1K), (DISCONEC | DISCONEC2));
   ad1.Start(); // read data
   data = ad1.GetData();
@@ -36,7 +37,7 @@ void loop() {
   Serial.print("HEX: ");
   Serial.print(data, HEX);
   Serial.print("");
-
+  ad1.EndCOM(); //leave the SPI bus free for others devices
   delay(200);
 
 }
