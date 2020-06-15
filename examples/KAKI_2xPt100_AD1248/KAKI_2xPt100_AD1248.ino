@@ -49,7 +49,7 @@ void setup(){
 void loop()
 {
   //ADS
-  
+  ad1.Initialize(); // start spi for ADS
 	// read 4 and 5
 	ad1.Setup((VREFCONON | REFSELT0 | MUXCALNOR), (PGA8 | DR5), (AINP4 | AINN5), (IDAC1K), ( IEXC11| DISCONEC2));
 	// read data
@@ -74,6 +74,8 @@ void loop()
   Serial.print(AIn45);
   Serial.print('\t');
   Serial.println(AIn67);
+
+  ad1.EndCOM(); //leave the SPI bus free for others devices
   
 }
 
