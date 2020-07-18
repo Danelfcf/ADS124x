@@ -1,6 +1,6 @@
 # ADS124X
 
- >Daniel F. C. Ferrando 
+ >Daniel F. C. Ferrando <br />  
  >John W. B. de Araujo¹ <br />  
  >Prof. Edson M. Kakuno¹ <br /> 
 
